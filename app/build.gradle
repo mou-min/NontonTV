@@ -77,6 +77,10 @@ dependencies {
     implementation('com.google.android.exoplayer:extension-rtmp:2.15.1') {
         exclude group: 'net.butterflytv.utils', module: 'rtmp-client'
     }
+    implementation('com.google.android.exoplayer:extension-rtmp:2.15.1') {
+    exclude group: 'net.butterflytv.utils', module: 'rtmp-client'
+}
+    implementation 'io.antmedia:rtmp-client:3.2.0'
     implementation 'com.github.ant-media:LibRtmp-Client-for-Android:v3.1.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
