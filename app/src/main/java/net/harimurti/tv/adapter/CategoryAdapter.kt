@@ -49,7 +49,7 @@ class CategoryAdapter(private val categories: ArrayList<Category>?) :
 
         // ---------------------- 关键修改开始 ----------------------
         // 自动计算列数：每个频道项大约 150dp 宽（可根据实际 item_channel.xml 调整）
-        val itemWidthDp = 150f  // 如果频道名称较长可改为 170~200；想更密集可改为 130
+        val itemWidthDp = 100f  // 如果频道名称较长可改为 170~200；想更密集可改为 130
         val screenWidthPx = context.resources.displayMetrics.widthPixels
         val density = context.resources.displayMetrics.density
         val screenWidthDp = screenWidthPx / density
