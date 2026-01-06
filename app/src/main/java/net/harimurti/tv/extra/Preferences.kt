@@ -1,5 +1,6 @@
 package net.harimurti.tv.extra
 
+import android.content.Context
 import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
 import com.google.gson.Gson
@@ -14,8 +15,7 @@ import kotlin.collections.ArrayList
 
 class Preferences {
     private val context = App.context
-    private val preferences: SharedPreferences =
-        PreferenceManager.getDefaultSharedPreferences(context)
+    private val preferences: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
     private val editor = preferences.edit()
 
     companion object {
@@ -39,81 +39,51 @@ class Preferences {
 
     var isFirstTime: Boolean
         get() = preferences.getBoolean(FIRST_TIME, true)
-        set(value) {
-            editor.putBoolean(FIRST_TIME, value)
-            editor.apply()
-        }
+        set(value) = editor.putBoolean(FIRST_TIME, value).apply()
 
     var ignoredVersion: Int
         get() = preferences.getInt(IGNORED_VERSION, 0)
-        set(value) {
-            editor.putInt(IGNORED_VERSION, value)
-            editor.apply()
-        }
+        set(value) = editor.putInt(IGNORED_VERSION, value).apply()
 
     var launchAtBoot: Boolean
         get() = preferences.getBoolean(LAUNCH_AT_BOOT, false)
-        set(value) {
-            editor.putBoolean(LAUNCH_AT_BOOT, value)
-            editor.apply()
-        }
+        set(value) = editor.putBoolean(LAUNCH_AT_BOOT, value).apply()
 
+    // 修改：默认勾选 Play Last Watched
     var playLastWatched: Boolean
-        get() = preferences.getBoolean(OPEN_LAST_WATCHED, false)
-        set(value) {
-            editor.putBoolean(OPEN_LAST_WATCHED, value)
-            editor.apply()
-        }
+        get() = preferences.getBoolean(OPEN_LAST_WATCHED, true)  // 改为 true
+        set(value) = editor.putBoolean(OPEN_LAST_WATCHED, value).apply()
 
     var sortFavorite: Boolean
         get() = preferences.getBoolean(SORT_FAVORITE, false)
-        set(value) {
-            editor.putBoolean(SORT_FAVORITE, value)
-            editor.apply()
-        }
+        set(value) = editor.putBoolean(SORT_FAVORITE, value).apply()
 
     var sortCategory: Boolean
         get() = preferences.getBoolean(SORT_CATEGORY, false)
-        set(value) {
-            editor.putBoolean(SORT_CATEGORY, value)
-            editor.apply()
-        }
+        set(value) = editor.putBoolean(SORT_CATEGORY, value).apply()
 
     var sortChannel: Boolean
         get() = preferences.getBoolean(SORT_CHANNEL, true)
-        set(value) {
-            editor.putBoolean(SORT_CHANNEL, value)
-            editor.apply()
-        }
+        set(value) = editor.putBoolean(SORT_CHANNEL, value).apply()
 
     var watched: PlayData
-        get() = Gson().fromJson(preferences.getString(LAST_WATCHED, "{}").toString(), PlayData::class.java)
+        get() = Gson().fromJson(preferences.getString(LAST_WATCHED, "{}") ?: "{}", PlayData::class.java)
         set(value) {
             val json = Gson().toJson(value)
-            editor.putString(LAST_WATCHED, json)
-            editor.apply()
+            editor.putString(LAST_WATCHED, json).apply()
         }
 
     var optimizePrebuffer: Boolean
         get() = preferences.getBoolean(OPTIMIZE_PREBUFFER, true)
-        set(value) {
-            editor.putBoolean(OPTIMIZE_PREBUFFER, value)
-            editor.apply()
-        }
+        set(value) = editor.putBoolean(OPTIMIZE_PREBUFFER, value).apply()
 
     var reverseNavigation: Boolean
         get() = preferences.getBoolean(REVERSE_NAVIGATION, false)
-        set(value) {
-            editor.putBoolean(REVERSE_NAVIGATION, value)
-            editor.apply()
-        }
+        set(value) = editor.putBoolean(REVERSE_NAVIGATION, value).apply()
 
     var countryId: String
-        get() = preferences.getString(COUNTRY_ID, "id").toString()
-    set(value) {
-        editor.putString(COUNTRY_ID, value)
-        editor.apply()
-    }
+        get() = preferences.getString(COUNTRY_ID, "id") ?: "id"
+        set(value) = editor.putString(COUNTRY_ID, value).apply()
 
     var sources: ArrayList<Source>?
         get() {
@@ -129,50 +99,35 @@ class Preferences {
                 if (list == null || list.isEmpty()) throw Exception("cannot parse sources?")
                 list.first().path = default.path
                 list.forEach {
-                    if (it.path.isLinkUrl()) result.add(it)
-                    else if (it.path.isPathExist()) result.add(it)
+                    if (it.path.isLinkUrl() || it.path.isPathExist()) result.add(it)
                 }
             } catch (e: Exception) {
                 e.printStackTrace()
             }
-
             if (result.isEmpty()) result.add(default)
-            val active = result.filter { s -> s.active }
+            val active = result.filter { it.active }
             if (active.isEmpty()) result.first().active = true
-
             return result
         }
         set(value) {
             val json = Gson().toJson(value)
-            editor.putString(SOURCES_PLAYLIST, json)
-            editor.apply()
+            editor.putString(SOURCES_PLAYLIST, json).apply()
         }
 
     var contributors: String?
         get() = preferences.getString(CONTRIBUTORS, context.getString(R.string.main_contributors))
-        set(value) {
-            editor.putString(CONTRIBUTORS, value)
-            editor.apply()
-        }
+        set(value) = editor.putString(CONTRIBUTORS, value).apply()
 
+    // 修改：Screen Size 默认 Fill（假设 3 = Fill，根据项目实际映射）
     var resizeMode: Int
-        get() = preferences.getInt(RESIZE_MODE, 0)
-        set(value) {
-            editor.putInt(RESIZE_MODE, value)
-            editor.apply()
-        }
+        get() = preferences.getInt(RESIZE_MODE, 3)  // 改为 3（Fill）
+        set(value) = editor.putInt(RESIZE_MODE, value).apply()
 
     var speedMode: Float
         get() = preferences.getFloat(SPEED_MODE, 1F)
-        set(value) {
-            editor.putFloat(SPEED_MODE, value)
-            editor.apply()
-        }
+        set(value) = editor.putFloat(SPEED_MODE, value).apply()
 
     var volume: Float
         get() = preferences.getFloat(VOLUME_CONTROL, 1F)
-        set(value) {
-            editor.putFloat(VOLUME_CONTROL, value)
-            editor.apply()
-        }
+        set(value) = editor.putFloat(VOLUME_CONTROL, value).apply()
 }
