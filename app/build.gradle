@@ -67,7 +67,10 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.12.13' //from 3.13 require sdk 21+
     implementation 'com.google.android.exoplayer:exoplayer:2.15.1'
     implementation 'com.google.android.exoplayer:exoplayer-rtsp:2.15.1'
-    implementation 'com.google.android.exoplayer:extension-rtmp:2.15.1'
+    implementation('com.google.android.exoplayer:extension-rtmp:2.15.1') {
+    exclude group: 'net.butterflytv.utils', module: 'rtmp-client'
+}
+    implementation 'io.antmedia:rtmp-client:3.2.0'
     implementation 'com.google.android.gms:play-services-auth:19.2.0'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'com.google.code.gson:gson:2.8.6'
