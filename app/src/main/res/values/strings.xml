@@ -1,7 +1,6 @@
 <resources>
+    <!-- ==================== 应用基本信息和URL ==================== -->
     <string name="app_name" translatable="false">Nonton TV</string>
-
-    <!-- json link -->
     <string name="website" translatable="false">https://github.com/hariimurti/NontonTV</string>
     <string name="telegram_group" translatable="false">https://t.me/paijemdev</string>
     <string name="iptv_playlist" translatable="false">https://bg.8862688.xyz/hn.m3u?from=%s</string>
@@ -10,102 +9,119 @@
     <string name="gh_contributors" translatable="false">https://api.github.com/repos/hariimurti/NontonTV/contributors</string>
     <string name="main_contributors" translatable="false">harimurti, madbulls</string>
 
-    <!-- some text -->
-    <string name="text_presents">.: PaijemDev Presents :.</string>
-    <string name="app_tagline_one">Free - OpenSource - No Ads,</string>
-    <string name="app_tagline_two">Light - Simple - Minimalist</string>
-    <string name="thanks_to">Thanks To :</string>
-    <string name="thanks_for_support">iptv-org for playlist and people who support this project 😘</string>
-    <string name="btn_retry">Retry</string>
-    <string name="btn_retry_count">Retry (%d)</string>
-    <string name="btn_close">Close</string>
-    <string name="no_network">No internet connection!</string>
-    <string name="press_back_twice_exit_app">Press again to exit the app!</string>
-    <string name="press_back_twice_exit_player">Press again to exit the player!</string>
-    <string name="track_selection_title">Select tracks</string>
-    <string name="error_unsupported">Media includes %s tracks, but none are playable by this device</string>
-    <string name="playback_speed">Playback Speed</string>
-    <string name="speed_0_25">0.25</string>
-    <string name="speed_0_5">0.5</string>
-    <string name="speed_0_75">0.75</string>
-    <string name="speed_normal">Normal</string>
-    <string name="speed_1_25">1.25</string>
-    <string name="speed_1_5">1.5</string>
-    <string name="speed_1_75">1.75</string>
-    <string name="speed_2">2</string>
-    <string name="screen_size">Screen Size</string>
-    <string name="mode_fit">Fit (default)</string>
-    <string name="mode_fixed_width">Fixed Width</string>
-    <string name="mode_fixed_height">Fixed Height</string>
-    <string name="mode_fill">Fill</string>
-    <string name="mode_zoom">Zoom</string>
-    <string name="must_allow_permissions">You must allow all permission requests for this app to work properly!</string>
-    <string name="search_channel">Search Channel</string>
-    <string name="name_channel">Name Channel</string>
-    <string name="top_category">No more categories above this</string>
-    <string name="bottom_category">No more categories below</string>
-    <string name="playlist_cant_be_parsed">Playlist doesn\'t exist, can\'t be parsed?</string>
-    <string name="btn_next_channel">Next Channel</string>
-    <string name="player_error_message">Code : %s\nCodeName : %s\nError Message : %s</string>
-    <string name="device_not_support_drm">Your device does not support DRM %s!</string>
-    <string name="favorite_channel">Favorite Channel</string>
-    <string name="removed_from_favorite">%s has been removed from Favorite</string>
-    <string name="added_into_favorite">%s has been added into Favorite</string>
-    <string name="already_in_favorite">%s is already in Favorite</string>
-    <string name="status_checking_permission">status: checking permission…</string>
-    <string name="status_checking_new_update">status: checking updates…</string>
-    <string name="status_preparing_playlist">status: preparing playlist…</string>
-    <string name="alert_first_time" translatable="false">For those who bought this app, please ask the seller to refund your money. This app is FREE!!!\n
-        \n-- -- -- --\nBagi anda yang membeli aplikasi ini, mintalah penjual untuk mengembalikan uang anda. Aplikasi ini GRATIS!!!</string>
+    <!-- ==================== 应用标语和感谢 ==================== -->
+    <string name="text_presents">.: PaijemDev 呈现 :.</string>
+    <string name="app_tagline_one">免费 - 开源 - 无广告，</string>
+    <string name="app_tagline_two">轻量 - 简单 - 极简</string>
+    <string name="thanks_to">感谢 :</string>
+    <string name="thanks_for_support">感谢 iptv-org 提供的播放列表以及支持本项目的各位 😘</string>
 
-    <!-- alert playlist -->
-    <string name="playlist_updated">Playlist has been updated!</string>
-    <string name="alert_title_playlist_error" translatable="false">Playlist Error</string>
-    <string name="dialog_retry">Try again</string>
-    <string name="dialog_cached">Use cache</string>
-    <string name="player_playback_error">Playback Error</string>
-    <string name="player_no_playlist">We have problem with the playlist</string>
-    <string name="player_no_channel">No channels to play</string>
-    <string name="player_playdata_error">Can\'t process play data</string>
-
-    <!-- alert update -->
-    <string name="alert_new_update">Update</string>
-    <string name="dialog_download">Download APK</string>
-    <string name="dialog_ignore">Ignore</string>
-    <string name="message_update">Version\n• Installed : v%s (%d)\n• Latest : %s (%d)\n\nChanges :</string>
-    <string name="message_update_changelog" translatable="false">\n• %s</string>
-    <string name="message_update_no_changelog">\n• others</string>
-
-    <!-- settings -->
-    <string name="settings">Preferences</string>
-    <string name="startup">Startup</string>
-    <string name="launch_at_boot">Run App on Boot</string>
-    <string name="play_last_watched">Play Last Watched</string>
-    <string name="playlist">Playlist</string>
-    <string name="sort_favorite">Sort Favorite</string>
-    <string name="sort_category">Sort Category</string>
-    <string name="sort_channel">Sort Channel</string>
-    <string name="player">Player</string>
-    <string name="optimize_prebuffer">Optimize Prebuffer</string>
-    <string name="reverse_player_navigation">Reverse DPAD Navigation</string>
-    <string name="tab_about">About</string>
-    <string name="tab_sources">Playlist</string>
-    <string name="tab_app">Application</string>
-    <string name="input_url">Link URL</string>
-    <string name="show_hidden" translatable="false">Hidden</string>
-    <string name="title_select_file_json">Select File Json</string>
-    <string name="default_playlist" translatable="false">IPTV-ORG ( %s )</string>
-    <string name="null_playlist">No playlists that can be displayed. Check your settings!</string>
-    <string name="checking_url">checking url…</string>
-    <string name="link_error">Link Error!</string>
-    <string name="link_copied_to_clipboard">Link copied to clipboard!</string>
-    <string name="warning_none_source_active">No active source, default will be enabled!</string>
-    <string name="more_information">More Information :</string>
-    <string name="button_website" translatable="false">Website</string>
+    <!-- ==================== 按钮文本 ==================== -->
+    <string name="btn_retry">重试</string>
+    <string name="btn_retry_count">重试 (%d)</string>
+    <string name="btn_close">关闭</string>
+    <string name="btn_next_channel">下一个频道</string>
+    <string name="dialog_retry">重试</string>
+    <string name="dialog_cached">使用缓存</string>
+    <string name="dialog_download">下载 APK</string>
+    <string name="dialog_ignore">忽略</string>
+    <string name="button_website" translatable="false">网站</string>
     <string name="button_telegram" translatable="false">Telegram</string>
-    <string name="indonesia" translatable="false">Indonesia</string>
-    <string name="japan" translatable="false">Japan</string>
-    <string name="malaysia" translatable="false">Malaysia</string>
-    <string name="singapore" translatable="false">Singapore</string>
-    <string name="south_korea" translatable="false">South Korea</string>
+
+    <!-- ==================== 网络和错误提示 ==================== -->
+    <string name="no_network">无网络连接！</string>
+    <string name="link_error">链接错误！</string>
+    <string name="playlist_cant_be_parsed">播放列表不存在或无法解析？</string>
+    <string name="player_playback_error">播放错误</string>
+    <string name="player_no_playlist">播放列表出现问题</string>
+    <string name="player_no_channel">没有可播放的频道</string>
+    <string name="player_playdata_error">无法处理播放数据</string>
+    <string name="player_error_message">错误代码 : %s\n错误名称 : %s\n错误信息 : %s</string>
+    <string name="device_not_support_drm">您的设备不支持 %s DRM！</string>
+    <string name="error_unsupported">媒体包含 %s 个音轨，但此设备均无法播放</string>
+
+    <!-- ==================== 退出提示 ==================== -->
+    <string name="press_back_twice_exit_app">再按一次退出应用！</string>
+    <string name="press_back_twice_exit_player">再按一次退出播放器！</string>
+
+    <!-- ==================== 播放器相关 ==================== -->
+    <string name="track_selection_title">选择音轨/字幕</string>
+    <string name="playback_speed">播放速度</string>
+    <string name="speed_0_25">0.25倍</string>
+    <string name="speed_0_5">0.5倍</string>
+    <string name="speed_0_75">0.75倍</string>
+    <string name="speed_normal">正常</string>
+    <string name="speed_1_25">1.25倍</string>
+    <string name="speed_1_5">1.5倍</string>
+    <string name="speed_1_75">1.75倍</string>
+    <string name="speed_2">2倍</string>
+    <string name="screen_size">画面尺寸</string>
+    <string name="mode_fit">适应 (默认)</string>
+    <string name="mode_fixed_width">固定宽度</string>
+    <string name="mode_fixed_height">固定高度</string>
+    <string name="mode_fill">填充</string>
+    <string name="mode_zoom">缩放</string>
+
+    <!-- ==================== 权限和状态 ==================== -->
+    <string name="must_allow_permissions">您必须允许所有权限请求，此应用才能正常工作！</string>
+    <string name="status_checking_permission">状态: 正在检查权限…</string>
+    <string name="status_checking_new_update">状态: 正在检查更新…</string>
+    <string name="status_preparing_playlist">状态: 正在准备播放列表…</string>
+
+    <!-- ==================== 搜索和频道 ==================== -->
+    <string name="search_channel">搜索频道</string>
+    <string name="name_channel">频道名称</string>
+    <string name="top_category">已到顶部分类</string>
+    <string name="bottom_category">已到底部分类</string>
+    <string name="favorite_channel">收藏频道</string>
+    <string name="removed_from_favorite">%s 已从收藏中移除</string>
+    <string name="added_into_favorite">%s 已添加到收藏</string>
+    <string name="already_in_favorite">%s 已在收藏中</string>
+
+    <!-- ==================== 首次启动警告 ==================== -->
+    <string name="alert_first_time" translatable="false">如果您购买了此应用，请向卖家要求退款。此应用是免费的！！！\n\n-- -- -- --\n如果您购买了此应用，请向卖家要求退款。此应用是免费的！！！</string>
+
+    <!-- ==================== 播放列表提示 ==================== -->
+    <string name="playlist_updated">播放列表已更新！</string>
+    <string name="alert_title_playlist_error" translatable="false">播放列表错误</string>
+
+    <!-- ==================== 更新相关 ==================== -->
+    <string name="alert_new_update">更新</string>
+    <string name="message_update">版本\n• 已安装 : v%s (%d)\n• 最新版 : %s (%d)\n\n更新内容 :</string>
+    <string name="message_update_changelog" translatable="false">\n• %s</string>
+    <string name="message_update_no_changelog">\n• 其他更新</string>
+
+    <!-- ==================== 设置相关 ==================== -->
+    <string name="settings">设置</string>
+    <string name="startup">启动项</string>
+    <string name="launch_at_boot">开机启动</string>
+    <string name="play_last_watched">播放上次观看的频道</string>
+    <string name="playlist">播放列表</string>
+    <string name="sort_favorite">收藏排序</string>
+    <string name="sort_category">分类排序</string>
+    <string name="sort_channel">频道排序</string>
+    <string name="player">播放器</string>
+    <string name="optimize_prebuffer">优化预缓冲</string>
+    <string name="reverse_player_navigation">反转方向键导航</string>
+    <string name="tab_about">关于</string>
+    <string name="tab_sources">播放源</string>
+    <string name="tab_app">应用</string>
+
+    <!-- ==================== 播放源管理 ==================== -->
+    <string name="input_url">输入链接</string>
+    <string name="show_hidden" translatable="false">显示隐藏</string>
+    <string name="title_select_file_json">选择 JSON 文件</string>
+    <string name="default_playlist" translatable="false">IPTV-ORG ( %s )</string>
+    <string name="null_playlist">没有可显示的播放列表。请检查您的设置！</string>
+    <string name="checking_url">正在检查链接…</string>
+    <string name="link_copied_to_clipboard">链接已复制到剪贴板！</string>
+    <string name="warning_none_source_active">没有启用任何播放源，将启用默认源！</string>
+
+    <!-- ==================== 信息和地区 ==================== -->
+    <string name="more_information">更多信息 :</string>
+    <string name="indonesia" translatable="false">印度尼西亚</string>
+    <string name="japan" translatable="false">日本</string>
+    <string name="malaysia" translatable="false">马来西亚</string>
+    <string name="singapore" translatable="false">新加坡</string>
+    <string name="south_korea" translatable="false">韩国</string>
 </resources>
